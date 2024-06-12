@@ -5,16 +5,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 99%;
-            height: 98%;
-        }
+      
+      body, html {
+          height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFA500;
+      }
+      
+      .box {
+          display: flex;
+        align-items: center;
+      }
+      
+      .box img:first-child {
+          margin-right: 20px;
+
+      }
+      
+      #logo {
+          align-self: flex-start;
+        margin-top: 20px;
+        
+      }
+        
     </style>
 </head>
 <body>
+
+
+    <img id="logo"  src="Brondtvlogo.png" height="320px" />
     <div class = box>
         <img src="tv.png" width="600" height="640">
     </div>
