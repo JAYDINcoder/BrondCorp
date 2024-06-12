@@ -3,7 +3,7 @@ body{
     background-color: orange;
 }
 
-img:hover{
+#logo:hover{
     animation: shake 0.5s infinite;
 }
 
