@@ -11,6 +11,17 @@ h1 {
     animation: colorRotate 1s linear 0s infinite;
   }
 
+.simon2{
+    top: 200px;
+    right: 600px;
+    position: absolute;
+    transition: transform .2s;
+}
+
+.simon2:hover{
+    transform: scale(1.5px);
+}
+
 #J{
     font-family: monospace;
 }
