@@ -26,7 +26,8 @@ a{
 }
 
 body{
-  background: linear-gradient(0deg, rgb(4, 2, 9) 0%, rgba(0,0,0,1) 100%);
+  text-shadow: 0 0 20px rgba(255, 255, 255, .35);
+  background-color: black;
   text-align: center;
 }
 
