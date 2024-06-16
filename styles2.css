@@ -1,5 +1,5 @@
 #col{
-  animation: trans 1s;
+  animation: trans ease-in 1.5s;
 }
 
 a{
@@ -21,13 +21,13 @@ a{
   src: url(Helvetica-Neue-Bold.ttf);
 }
 
+.header{
+  padding: 0%;
+}
+
 body{
-    background-image: url('200w.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    text-align: center;
+  background: linear-gradient(0deg, rgb(7, 4, 15) 0%, rgba(0,0,0,1) 100%);
+  text-align: center;
 }
 
 h1 {
@@ -108,12 +108,10 @@ h1 {
 @keyframes trans{
   from{
     opacity: 0;
-    scale: 10%;
     transform: rotate(45deg);
   }
   to{
     opacity: 1;
-    scale: 100%;
     transform: rotate(0deg);
   }
 }
