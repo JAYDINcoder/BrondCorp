@@ -1,0 +1,182 @@
+body{
+    background-image: url(computerbg.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+    cursor: url('BrondAlive.PNG'),auto;
+}
+
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+#power{
+    width: 2.6%;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    z-index: 99;
+}
+
+.title{
+    font-family: funnh;
+    position: absolute;
+    bottom: -37px;
+    z-index: 99;
+    -webkit-text-stroke: 2.2px #000000;
+    filter: drop-shadow(1px 1px 2px #000000);
+}
+
+.task{
+    position: absolute;
+    left: -90px;
+    bottom: -2px;
+    width: 170%;
+    height: 60px;
+    z-index: 98;
+    background: linear-gradient(#CCCCCC, #808080);
+}
+
+#bIcon{
+    width: 3%;
+    position: absolute;
+    z-index: 99;
+    bottom: -5px;
+    left: 9.3%;;
+}
+
+#title1{
+    font-family: funnh;
+    position: absolute;
+    top: 96px;
+    -webkit-text-stroke: 0.2px #000000;
+    filter: drop-shadow(2px 2px 2px #000000);
+}
+#title1:hover{
+    text-decoration: underline white;
+}
+
+.Icon1:hover{
+    cursor: pointer;
+}
+
+.close:hover{
+    cursor: pointer;
+}
+
+.close{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 12px;
+    right: 15px;
+    z-index: 1001;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: inset 0.2em 0.2em 0.2em 0 rgba(255, 67, 67, 0.5), inset -0.2em -0.2em 0.2em 0 rgba(0,0,0,0.5);
+    filter: drop-shadow(3px,3px,3px #ffffff);
+}
+
+.toolbar{
+    position: fixed;
+    width: 510px;
+    height: 50px;
+    cursor: move;
+    transform: translate(-50%,-50%);
+    top: 20%;
+    left: 50%;
+    z-index: 97;
+    background: linear-gradient(90deg, blue, black);
+}
+
+.icon{
+    position: absolute;
+    width: 5%;
+    top: 20px;
+    left: 8px;
+}
+
+#body{
+    font-family: retro;
+    position: absolute;
+    top: 140px;
+    right: 20px;
+    width: 220px;
+    font-style: italic;
+    -webkit-text-stroke: 2.2px rgb(43, 43, 43);
+    word-wrap:break-word;
+}
+
+@font-face {
+    font-family: funnh;
+    src: url(COMIC.TTF);
+}
+
+.BG{
+    position: relative;
+    width: 510px;
+    height: 720%;
+    top: 50px;
+    z-index: -99;
+    background-color: rgb(218, 218, 218);
+}
+
+#image{
+    width: 40%;
+    top: 110px;
+    left: 30px;
+    position: absolute;
+    z-index: 99;
+    animation: rot 0.5s alternate infinite ease-in-out;
+    filter: drop-shadow(16px 18px 13px #000000);
+}
+
+.contain{
+    top: 10px;
+    left: 50%;
+}
+
+@font-face {
+    font-family: funni;
+    src: url(COMIC.TTF);
+  }
+
+@font-face {
+    font-family: retro;
+    src: url(VCR_OSD_MONO_1.001.ttf);
+}
+
+
+#text{
+    font-family: funni;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+}
+
+.Window{
+    position: fixed;
+    cursor: move;
+    width: 500px;
+    height: 400px;
+    z-index: 100;
+    border: 5px solid grey;
+}
+
+
+@keyframes rot {
+    0% { transform: rotate(-2deg); }
+    100%  { transform: rotate(2deg); }    
+}
+
+@keyframes trans{
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
