@@ -36,7 +36,8 @@ Butt2.addEventListener('click', function() {
   Butt3.addEventListener('click', function() {
     Vomit.style.animation="none"
     setTimeout(function(){
-        snd.play();
+        const newAudio = snd.cloneNode()
+        newAudio.play()
         Vomit.style.animation="drop 6s Linear"
     }, 100)
   });
