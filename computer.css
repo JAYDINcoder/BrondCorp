@@ -201,10 +201,21 @@ html {
     top: 20%;
     left: 50%;
     z-index: 97;
-    background: linear-gradient(90deg, blue, black);
+    background: blue; /*for compatibility with older browsers*/
+    background-image: linear-gradient(blue, #4534ff);  
     filter: drop-shadow(3px 3px 2px #000000);
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
 }
-
+.toolbar:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 50%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255, 255, 255, 0.065));
+  }
 .toolbar:hover{
     cursor: wait;
 }
@@ -218,10 +229,59 @@ html {
     top: 20%;
     left: 50%;
     z-index: 97;
-    background: linear-gradient(90deg, blue, black);
+    background: blue; /*for compatibility with older browsers*/
+    background-image: linear-gradient(blue, #4534ff);  
     filter: drop-shadow(3px 3px 2px #000000);
+    box-shadow: 0px 1px 4px -2px #333;
+    text-shadow: 0px -1px #333;
 }
-
+.toolbar2:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 50%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255, 255, 255, 0.065));
+  }
+  .BG2:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  }
+  .BG:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 100%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  }
+  .close:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 40%;
+    border-radius: 20%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  }
+  .close2:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: 40%;
+    border-radius: 20%;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+  }
 .icon{
     position: absolute;
     width: 5%;
@@ -332,6 +392,7 @@ html {
     position: absolute;
     top: 5px;
     left: 15px;
+
 }
 
 .Window{
@@ -340,7 +401,6 @@ html {
     width: 500px;
     height: 400px;
     z-index: 100;
-    border: 5px solid grey;
 }
 .Window2{
     position: fixed;
@@ -348,7 +408,6 @@ html {
     width: 640px;
     height: 400px;
     z-index: 100;
-    border: 5px solid grey;
 }
 
 
