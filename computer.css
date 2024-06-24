@@ -452,6 +452,33 @@ html {
     animation: dan 2s linear infinite;
 }
 
+#power:hover{
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px black;
+    transition: 0.4s;
+ }
+
+.fuzzy-overlay {
+    position: absolute;
+    inset: -200%;
+    background-image: url("noise.png");
+    opacity: 10%;
+    z-index: 1010;
+    /* pointer-events: none; */
+    pointer-events:none;
+    animation: shift 0.2s linear infinite both;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(10%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-10%) translateY(-10%);
+    }
+}
+
 @keyframes rot {
     0% { transform: rotate(-2deg); }
     100%  { transform: rotate(2deg); }    
