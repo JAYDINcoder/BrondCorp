@@ -75,19 +75,18 @@ html {
 }
 
 #power{
-    width: 2.6%;
+    width: 3%;
     position: absolute;
     right: 10px;
-    bottom: 4px;
+    bottom: 9px;
     z-index: 102;
 }
 
 .title{
     font-family: funnh;
     position: absolute;
-    bottom: -37px;
+    bottom: -29px;
     z-index: 102;
-    -webkit-text-stroke: 2.2px #000000;
     filter: drop-shadow(1px 1px 2px #000000);
 }
 
@@ -95,17 +94,21 @@ html {
     position: absolute;
     left: -90px;
     bottom: -2px;
-    width: 170%;
-    height: 60px;
+    width: 177%;
+    height: 70px;
     z-index: 101;
-    background: linear-gradient(#CCCCCC, #808080);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(89,89,89,1) 100%);
+    opacity: 0.8;
+    border: solid 3px rgba(233, 233, 233, 0.467);
+
 }
 
 #bIcon{
     width: 3%;
     position: absolute;
     z-index: 102;
-    bottom: -5px;
+    bottom: 5px;
     left: 9.3%;;
 }
 
@@ -206,95 +209,153 @@ html {
 }
 
 .toolbar{
-    position: fixed;
-    width: 510px;
-    height: 50px;
-    cursor: move;
-    transform: translate(-50%,-50%);
-    top: 20%;
-    left: 50%;
-    z-index: 97;
-    background: blue; /*for compatibility with older browsers*/
-    background-image: linear-gradient(blue, #4534ff);  
-    filter: drop-shadow(3px 3px 2px #000000);
-    box-shadow: 0px 1px 4px -2px #333;
-    text-shadow: 0px -1px #333;
-}
-.toolbar:after{
-    content: '';
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    width: max-content;
+    height: auto;
+    margin-left: 2px;
+    border: solid 6px #aaa7;
+    border-image: linear-gradient(#aaa7 29%, #fffa 39%, #9997 39.9%, #7777 69%, #eee8 99%) 30;
+    backdrop-filter: blur(5px);
+    outline: solid 1px #fffc;
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 50%;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255, 255, 255, 0.065));
-  }
-.toolbar:hover{
-    cursor: wait;
+    border-radius: 3px;
+    box-shadow: #000 0px 1px 7px 2px;
+    box-sizing: border-box;
+    z-index: 4;
 }
-
+.window-header {
+    background-color: #aaa7;
+    color: #111;
+    padding: 0 2px;
+    text-shadow: #fff 0px 0px 4px, #fff 0px 0px 9px;
+    padding-bottom: 6px;
+    cursor: grab;
+    user-select: none;
+    font-size: 14px;
+}
+.window-header2{
+    background-color: #aaa7;
+    color: #111;
+    padding: 0 2px;
+    text-shadow: #fff 0px 0px 4px, #fff 0px 0px 9px;
+    padding-bottom: 6px;
+    cursor: grab;
+    user-select: none;
+    font-size: 14px;
+}
+.window-content {
+    background-color: #fff;
+    font-size: 15px;
+    height: calc(100% - 47px);
+    border: solid 1px #0008;
+    outline: solid 1px #fff4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.window-content2 {
+    background-color: #fff;
+    font-size: 15px;
+    height: calc(100% - 47px);
+    border: solid 1px #0008;
+    outline: solid 1px #fff4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.window-header-image {
+    width: 17px;
+    height: 17px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+}
+.window-header-image2 {
+    width: 17px;
+    height: 17px;
+    margin-bottom: -2px;
+    margin-right: 2px;
+}
+.winX-button {
+    position: absolute;
+    top: -7px;
+    right: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    display: inline-block;
+    padding: 4px 17px;
+    line-height: 9px;
+    min-width: 47px;
+    height: 19px;
+    font-size: 26px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: solid 1px rgb(197, 194, 231);
+    border-top: 1px solid rgb(252, 252, 252);
+    background: linear-gradient(0deg, rgb(110, 108, 223) 8%, rgb(48, 53, 200) 54%, rgb(118, 122, 229) 55%, rgb(171, 170, 244) 92%);
+    outline: solid 1px rgb(27, 31, 82);
+    cursor: pointer;
+    transition: 0.1s ease-out;
+    animation: colorz 1s linear infinite;
+}
+.winX-button2 {
+    position: absolute;
+    top: -7px;
+    right: 1px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    display: inline-block;
+    padding: 4px 17px;
+    line-height: 9px;
+    min-width: 47px;
+    height: 19px;
+    font-size: 26px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: solid 1px rgb(197, 194, 231);
+    border-top: 1px solid rgb(252, 252, 252);
+    background: linear-gradient(0deg, rgb(110, 108, 223) 8%, rgb(48, 53, 200) 54%, rgb(118, 122, 229) 55%, rgb(171, 170, 244) 92%);
+    outline: solid 1px rgb(27, 31, 82);
+    cursor: pointer;
+    transition: 0.1s ease-out;
+    animation: colorz 01s linear infinite;
+}
+.bg1{
+    width: 500px;
+    height: 300px;
+    background-color: white;
+}
+.winX-button img {
+    width: 11px;
+    margin-bottom: 5px;
+}
 .toolbar2{
-    position: fixed;
-    width: 650px;
-    height: 50px;
-    cursor: move;
-    transform: translate(-50%,-50%);
-    top: 20%;
-    left: 50%;
-    z-index: 97;
-    background: blue; /*for compatibility with older browsers*/
-    background-image: linear-gradient(blue, #4534ff);  
-    filter: drop-shadow(3px 3px 2px #000000);
-    box-shadow: 0px 1px 4px -2px #333;
-    text-shadow: 0px -1px #333;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    width: max-content;
+    height: auto;
+    margin-left: 2px;
+    border: solid 6px #aaa7;
+    border-image: linear-gradient(#aaa7 29%, #fffa 39%, #9997 39.9%, #7777 69%, #eee8 99%) 30;
+    backdrop-filter: blur(5px);
+    outline: solid 1px #fffc;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: #000 0px 1px 7px 2px;
+    box-sizing: border-box;
+    z-index: 4;
 }
-.toolbar2:after{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 50%;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255, 255, 255, 0.065));
-  }
-  .BG2:after{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 100%;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-  }
-  .BG:after{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 100%;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-  }
-  .close:after{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 40%;
-    border-radius: 20%;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-  }
-  .close2:after{
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: calc(100% - 4px);
-    height: 40%;
-    border-radius: 20%;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-  }
+.bg2{
+    width: 400px;
+    height: 700px;
+    background-color: white;
+}
 .icon{
     position: absolute;
     width: 5%;
@@ -350,26 +411,17 @@ html {
 #body{
     font-family: retro;
     position: absolute;
-    top: 140px;
+    top: 100px;
     right: 20px;
     width: 220px;
     font-style: italic;
-    -webkit-text-stroke: 2.2px rgb(43, 43, 43);
+    -webkit-text-stroke: 2.2px rgb(0, 0, 0);
     word-wrap:break-word;
 }
 
 @font-face {
     font-family: funnh;
     src: url(COMIC.TTF);
-}
-
-.BG{
-    position: relative;
-    width: 510px;
-    height: 720%;
-    top: 50px;
-    z-index: -1000;
-    background-color: rgb(218, 218, 218);
 }
 
 .BG2{
@@ -383,7 +435,7 @@ html {
 
 #image{
     width: 40%;
-    top: 110px;
+    top: 65px;
     left: 30px;
     position: absolute;
     z-index: 99;
@@ -432,8 +484,8 @@ html {
 
 .Garlic{
     position: absolute;
-    bottom: 48%;
-    left: -269px;
+    bottom: 50%;
+    left: -279px;
 }
 
 .Party{
@@ -462,11 +514,18 @@ html {
     position: absolute;
     inset: -200%;
     background-image: url("noise.png");
-    opacity: 10%;
+    opacity: 3%;
     z-index: 1010;
     /* pointer-events: none; */
     pointer-events:none;
     animation: shift 0.2s linear infinite both;
+}
+
+@keyframes outahere{
+    from{
+        opacity: 0;
+        transform: scale();
+    }
 }
 
 @keyframes shift {
@@ -599,3 +658,12 @@ html {
         background-color: rgb(255,0,127);
     }
 }
+
+@keyframes colorz {
+    from {
+        background: linear-gradient(0deg, rgb(110, 108, 223) 8%, rgb(48, 53, 200) 54%, rgb(118, 122, 229) 55%, rgb(171, 170, 244) 92%);
+    }
+    to {
+        background: linear-gradient(0deg, rgb(206, 108, 223) 8%, rgb(200, 48, 200) 54%, rgb(229, 118, 218) 55%, rgb(229, 170, 244) 92%);
+    }
+  }

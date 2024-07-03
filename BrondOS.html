@@ -49,26 +49,84 @@
         <img class="icon2" src="1076744copy.png" draggable="false" alt="">
         <p id="title2" style="font-size: 20px; color: #fff;">What.gif</p>
     </div>
-        <div class="toolbar">
-            <div class="close">
-                <p id="x" style="color: #fff; font-size: 30px; ;">x</p>
-            </div>
-            <div id="body" style="font-size: 50px; color: rgb(163, 163, 163);">Nothing to see here</div>
-            <div class="Window"></div>
-            <div id="text" style="font-size: 30px; color: #fff;">Brond.txt</div>
+    <div class="toolbar" style="display: block; z-index: 5; left: 351.5px; top: 239px;"> <div class="window-header" style="cursor: grab;">
+        <img class="window-header-image" src="BrondAlive.PNG" onmousedown="startDrag(event, 'window1')"> Brond.txt <button class="winX-button"><img class="winX-image" src="x.png"></button></div>
+        <div class="window-content"> 
+            <div id="body" style="font-size: 50px; color: #fff;">Nothing to see here</div>
             <img id="image" src="BrondAlive.PNG" alt="">
-            <div class="BG"></div>
+            <div class="bg1"></div>
         </div>
     </div>
-    <div class="toolbar2">
-        <div class="close2">
-            <p id="x" style="color: #fff; font-size: 30px; ;">x</p>
+    <div class="toolbar2" style="display: block; z-index: 5; left: 351.5px; top: 239px;"> <div class="window-header2" style="cursor: grab;">
+        <img class="window-header-image2" src="noise.png" onmousedown="startDrag(event, 'window1')"> What.gif <button class="winX-button2"><img class="winX-image" src="x.png" width="11px"></button></div>
+        <div class="window-content2"> 
+            <img id="2image" src="december-9th-december.gif" alt="">
         </div>
-        <img id="apple" src="december-9th-december.gif" alt="">
-        <div class="Window2"></div>
-        <div id="text" style="font-size: 30px; color: #fff;">What.gif</div>
-        <div class="BG2"></div>
     </div>
     <script src="drag.js"></script>
+    <script>
+        let isDragging = false;
+        let offsetX, offsetY;
+            const windowElement = document.querySelector('.toolbar');
+            const windowHeader = document.querySelector('.window-header');
+            windowHeader.addEventListener('mousedown', (e) => {
+                isDragging = true;
+                offsetX = e.clientX - windowElement.getBoundingClientRect().left;
+                offsetY = e.clientY - windowElement.getBoundingClientRect().top;
+                windowHeader.style.cursor = 'grabbing'; });
+            document.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        const newX = e.clientX - offsetX;
+        const newY = e.clientY - offsetY;
+        const maxX = window.innerWidth - windowElement.clientWidth - 13;
+        const maxY = window.innerHeight - windowElement.clientHeight - 14;
+        const clampedX = Math.min(Math.max(newX, 0), maxX);
+        const clampedY = Math.min(Math.max(newY, 0), maxY);
+        windowElement.style.left = clampedX + 'px';
+        windowElement.style.top = clampedY + 'px'; });
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                windowHeader.style.cursor = 'grab'; });
+            function closeWindow() {
+        const window = document.querySelector('.window'); window.style.display = 'none'; media.pause(); }
+            var button = document.querySelector('.win7-button');
+            var text = document.querySelector('.win7-text');
+        button.addEventListener('mousedown', function() {
+            text.classList.add('win7-text-active'); });
+        document.addEventListener('mouseup', function(event) { if (!button.contains(event.target)) {
+            text.classList.remove('win7-text-active'); } });
+        </script>
+            <script>
+                let isDragging2 = false;
+                let offsetX2, offsetY2;
+                    const windowElement2 = document.querySelector('.toolbar2');
+                    const windowHeader2 = document.querySelector('.window-header2');
+                    windowHeader2.addEventListener('mousedown', (e) => {
+                        isDragging = true;
+                        offsetX2 = e.clientX - windowElement2.getBoundingClientRect().left;
+                        offsetY2 = e.clientY - windowElement2.getBoundingClientRect().top;
+                        windowHeader2.style.cursor = 'grabbing'; });
+                    document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                const newX2 = e.clientX - offsetX2;
+                const newY2 = e.clientY - offsetY2;
+                const maxX2 = window.innerWidth - windowElement2.clientWidth - 13;
+                const maxY2 = window.innerHeight - windowElement2.clientHeight - 14;
+                const clampedX2 = Math.min(Math.max(newX2, 0), maxX2);
+                const clampedY2 = Math.min(Math.max(newY2, 0), maxY2);
+                windowElement2.style.left = clampedX2 + 'px';
+                windowElement2.style.top = clampedY2 + 'px'; });
+                    document.addEventListener('mouseup', () => {
+                        isDragging2 = false;
+                        windowHeader2.style.cursor = 'grab'; });
+                    function closeWindow() {
+                const window = document.querySelector('.window'); window.style.display = 'none'; media.pause(); }
+                    var button = document.querySelector('.win7-button');
+                    var text = document.querySelector('.win7-text');
+                button.addEventListener('mousedown', function() {
+                    text.classList.add('win7-text-active'); });
+                document.addEventListener('mouseup', function(event) { if (!button.contains(event.target)) {
+                    text.classList.remove('win7-text-active'); } });
+                </script>
 </body>
 </html>

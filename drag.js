@@ -1,8 +1,8 @@
 var Window = document.querySelector(".toolbar")
 var Butt = document.querySelector(".icon")
-var End = document.querySelector(".close")
+var End = document.querySelector(".winX-button")
 var Window2 = document.querySelector(".toolbar2")
-var End2 = document.querySelector(".close2")
+var End2 = document.querySelector(".winX-button2")
 var Butt2 = document.querySelector(".icon2")
 var cool = document.querySelector(".endthing")
 var power = document.querySelector("#power")
@@ -69,30 +69,6 @@ End.addEventListener('click', function() {
 End2.addEventListener('click', function() {
     Window2.style.display = 'none';
   });
-Window.addEventListener("mousemove",(e)=>{
-    if (move){
-        Window.style.zIndex = 99;
-        Window2.style.zIndex = 98;
-        if (e.clientY > Window.offsetHeight/2 && e.clientY < window.innerHeight - Window.offsetHeight/2){
-            Window.style.top = e.clientY + "px";
-        }
-        if (e.clientX > Window.offsetWidth/2 && e.clientX < window.innerWidth - Window.offsetWidth/2){
-            Window.style.left = e.clientX + "px";
-        }
-    }
-})
-Window2.addEventListener("mousemove",(e)=>{
-    if (move){
-        Window2.style.zIndex = 99;
-        Window.style.zIndex = 98;
-        if (e.clientY > Window2.offsetHeight/2 && e.clientY < window.innerHeight - Window2.offsetHeight/2){
-            Window2.style.top = e.clientY + "px";
-        }
-        if (e.clientX > Window2.offsetWidth/2 && e.clientX < window.innerWidth - Window2.offsetWidth/2){
-            Window2.style.left = e.clientX + "px";
-        }
-    }
-})
 function unfade(element) {
     var op = 0.1;  // initial opacity
     Window.style.display = 'block';
@@ -148,15 +124,3 @@ Audio.prototype.stop = function() {
     music.pause();
     music.currentTime = 0;
 };
-Window.addEventListener("mousedown",()=>{
-    move = true;
-})
-Window.addEventListener("mouseup",()=>{
-    move = false;
-})
-Window2.addEventListener("mousedown",()=>{
-    move = true;
-})
-Window2.addEventListener("mouseup",()=>{
-    move = false;
-})
