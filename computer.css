@@ -33,9 +33,9 @@ html {
     top: -50%;
     height: 250%;
     position: absolute;
-    animation: greenglow 3s linear infinite;
     z-index: 1002;
     background: #0011ff;
+    animation: rainbow-bg 0.2s linear infinite, greenglow 3s linear infinite;
   }
   
   @keyframes greenglow {
@@ -80,6 +80,11 @@ html {
     right: 10px;
     bottom: 9px;
     z-index: 102;
+    filter: grayscale(100%) contrast(90%) brightness(60%);
+}
+#power:hover{
+    transition: 1s ease-in;
+
 }
 
 .title{
@@ -110,8 +115,11 @@ html {
     z-index: 102;
     bottom: 5px;
     left: 9.3%;;
+    transition: 0.2s ease-in;
 }
-
+#bIcon:hover{
+    filter: invert(100%);
+}
 #title1{
     font-family: funnh;
     position: absolute;
